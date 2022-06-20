@@ -27,7 +27,7 @@ for i in range(0, 6, 2):
         np.linalg.pinv(iris_covariance),
     )
 
-    print(f"試行 {int(i / 2 + 1)}")
+    print(f"試行{int(i / 2 + 1)}")
     print(
         f"1つ目のデータ: index = {select_iris_data_index[i]}, {iris_category[iris.target[select_iris_data_index[i]]]}: {iris_data1}"
     )
