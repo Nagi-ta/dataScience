@@ -9,7 +9,7 @@ import matplotlib.patheffects as path_effects
 
 # read csv
 rank_list = []
-with open("./whitewinerank.csv") as f:
+with open("./redwinerank.csv") as f:
     reader = csv.reader(f)
     for row in reader:
         row = [row[0]] + [int(r) for r in row[1:]]
@@ -73,9 +73,9 @@ plt.tick_params(labelsize=15)
 plt.xlabel("Top 20", fontsize=20)  # ,font_properties=fp2)
 plt.ylabel("nDCG", fontsize=20)  # ,font_properties=fp2)
 plt.title(
-    "GComparison of Google and Yahoo images",
+    "Comparison of Google and Yahoo images",
     fontsize=20,
 )  # font_properties=fp2)
 
 plt.legend([r[0] for r in rank_list], loc="best", fontsize=20)
-plt.savefig("ex3-nDCG2.pdf")  # スケーラブルな PDF に出力
+plt.savefig("ex3-nDCG.pdf")  # スケーラブルな PDF に出力
