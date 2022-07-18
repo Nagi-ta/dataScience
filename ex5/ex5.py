@@ -27,7 +27,7 @@ if __name__ == "__main__":
     target = iris.target
 
     for i, d, p, t in zip(range(1, 151), data, predicted, target):
-        print(f"{i} data: {d}   true_value: {t}  purity: {p}")
+        print(f"{i} data: {d}   true_cluster: {t}  predicted_cluster: {p}")
     CT = cross_table(target, predicted)
 
     purity_val = purity(CT)
