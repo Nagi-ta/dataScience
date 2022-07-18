@@ -26,8 +26,8 @@ if __name__ == "__main__":
     predicted = k_means.predict(data)
     target = iris.target
 
-    for d, p, t in zip(data, predicted, target):
-        print(f"data: {d}   true_value: {t}  purity: {p}")
+    for i, d, p, t in zip(range(1, 151), data, predicted, target):
+        print(f"{i} data: {d}   true_value: {t}  purity: {p}")
     CT = cross_table(target, predicted)
 
     purity_val = purity(CT)
