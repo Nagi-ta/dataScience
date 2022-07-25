@@ -48,7 +48,6 @@ if __name__ == "__main__":
     predicted = k_means.predict(vector)
     end_time = time.perf_counter()
     elapsed_time = end_time - start_time
-    print(elapsed_time)
 
     for p, t in zip(predicted, target_value_list):
         print(f"   true_cluster: {t}  predicted_cluster: {p}")
@@ -59,3 +58,4 @@ if __name__ == "__main__":
     print(f"CT: {CT}")
     print(f"Purity:    {purity_val}")
     print(f"V-measure: {v_measure_score(target_value_list, predicted)}")
+    print(f"elapsed_time: {elapsed_time}")
