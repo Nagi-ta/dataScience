@@ -19,6 +19,7 @@ def purity(CT):
 if __name__ == "__main__":
     iris = load_iris()
     data = iris.data
+    print(data)
     cluster_num = 3
 
     k_means = cluster.KMeans(n_clusters=cluster_num)
